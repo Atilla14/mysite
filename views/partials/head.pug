@@ -1,0 +1,16 @@
+mixin head (stylesheets, scripts)
+  //- accept two array of urls, one for css and one of js
+  meta(charset='utf-8')
+  title Atilla14
+  //- meta(name='description', content='Compare Kenyan prices ✓ 1000s of  products ✓ Find the best deals from Kenyan shops ✓ Check ratings and reviews of products you love on sokoprice, before you buy.Price comparison on a different level!')
+  meta(name='author', content='Sathya')
+  //- meta(name='viewport', content='width=device-width, initial-scale=1')
+
+  link(href='https://fonts.googleapis.com/css?family=Roboto+Condensed', rel='stylesheet', type='text/css')
+  link(href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900,100italic,100,300italic,400italic,500italic,700italic,900italic', rel='stylesheet', type='text/css')
+  link(rel='stylesheet', type="text/css", href='css/fonts/fontello/css/fontello.css')
+  link(rel='stylesheet', type="text/css", href='css/layout.css')
+  each href in stylesheets
+    link(rel='stylesheet', type="text/css", href= href)
+  each src in scripts
+    script(type="text/javascript", src= src)

@@ -1,0 +1,59 @@
+doctype html
+include ./partials/head.pug
+html(lang='en')
+  head
+    +head (['css/timer.css','css/email.css'],['https://unpkg.com/axios/dist/axios.min.js','js/vendor/countdown/countdown.min.js','js/timer.js','js/email.js'])
+  body
+    #atilla14-header
+      h1 Sorry! This site is still under construction
+      h3 Enter your email and you will be notified when this site is live
+    #atilla14-timer
+      .timer-block
+        label#days-1.atill14-timer-cell 0
+        label#days-2.atill14-timer-cell 0
+        label.timer-label days
+      label.atilla14-timer-separator :
+      .timer-block
+        label#hours-1.atill14-timer-cell 0
+        label#hours-2.atill14-timer-cell 0
+        label.timer-label hours
+      label.atilla14-timer-separator :
+      .timer-block
+        label#minutes-1.atill14-timer-cell 0
+        label#minutes-2.atill14-timer-cell 0
+        label.timer-label minutes
+      label.atilla14-timer-separator :
+      .timer-block
+        label#seconds-1.atill14-timer-cell 0
+        label#seconds-2.atill14-timer-cell 0
+        label.timer-label seconds
+    #atilla14-email
+      #atilla14-email-form
+        .form-input
+          input#email.form-field(type='text', placeholder='Enter your email', autofocus)
+          label#notice * You won't receive any spam
+        button#submit-email.form-submit Notify Me!
+          #button-loader
+
+    #atilla14-footer
+      .viewed-container
+        label Best viewed on
+          i.icon-desktop
+          span with browsers
+          i.icon-chrome
+          i.icon-firefox
+      .share-container
+        a(href='https://github.com/atilla14', target='_blank')
+          i.icon-github-circled
+        a(href='https://codepen.io/Atilla14/' target="_blank")
+          i.icon-codeopen
+        //- a(href='https://dribbble.com/14_atilla' target="_blank")
+        //-   i.icon-dribbble
+        a(href='https://www.behance.net/atilla_14' target="_blank")
+          i.icon-behance
+        a(href='https://twitter.com/intent/follow?screen_name=14_atilla' target="_blank")
+          i.icon-twitter
+        a(href='https://facebook.com/sathya.ravi.7796' target="_blank")
+          i.icon-facebook
+        a(href='https://www.linkedin.com/in/sathyanarayanravi' target="_blank")
+          i.icon-linkedin

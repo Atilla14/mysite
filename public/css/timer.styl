@@ -1,0 +1,86 @@
+cell-color = #455A64
+cell-border = #CFD8DC
+
+#atilla14-timer .timer-block
+  display inline-flex
+  align-items center
+  justify-content center
+  max-width 200px
+  flex-wrap wrap
+
+.atill14-timer-cell
+  display inline-block
+  height 120px
+  width 70px
+  font-size 50px
+  font-family 'Roboto Condensed'
+  line-height 120px
+  background-color cell-color
+  color white
+  text-align center
+  margin 5px
+  border 4px solid cell-border
+  border-radius 15px
+  overflow-y hidden
+  position relative
+  box-shadow 0 0 3px 1px #aaa
+
+  &:before
+    content ''
+    height 100%
+    width 100%
+    position absolute
+    top 0
+    left 0
+    background-color rgba(cell-border, 0.15)
+
+  &:after
+    content ''
+    height 50%
+    width 100%
+    position absolute
+    top 0
+    left 0
+    background-color rgba(cell-border, 0.1)
+
+.timer-block
+  .timer-label
+    font-family 'Roboto Condensed'
+    font-size 18px
+    order 1
+
+#seconds-2
+  &:before
+    animation timer-turn 1s ease-in-out infinite forwards
+
+#seconds-1
+  &:before
+    animation timer-turn 10s ease-in-out infinite forwards
+
+#minutes-2
+  &:before
+    animation timer-turn 60s ease-in-out infinite forwards
+
+#minutes-1
+  &:before
+    animation timer-turn 600s ease-in-out infinite forwards
+
+#hours-2
+  &:before
+    animation timer-turn 3600s ease-in-out infinite forwards
+
+#hours-1
+  &:before
+    animation timer-turn 36000s ease-in-out infinite forwards
+
+.atilla14-timer-separator
+  font-size 40px
+  font-family 'Roboto Condensed'
+
+@keyframes timer-turn
+  0%
+    transform translateY(0)
+    opacity 1
+  100%
+    transform translateY(-100%)
+    opacity 0

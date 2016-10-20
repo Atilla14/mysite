@@ -1,0 +1,207 @@
+#atilla14-timer .timer-block {
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  max-width: 200px;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.atill14-timer-cell {
+  display: inline-block;
+  height: 120px;
+  width: 70px;
+  font-size: 50px;
+  font-family: 'Roboto Condensed';
+  line-height: 120px;
+  background-color: #455a64;
+  color: #fff;
+  text-align: center;
+  margin: 5px;
+  border: 4px solid #cfd8dc;
+  border-radius: 15px;
+  overflow-y: hidden;
+  position: relative;
+  -webkit-box-shadow: 0 0 3px 1px #aaa;
+  box-shadow: 0 0 3px 1px #aaa;
+}
+.atill14-timer-cell:before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(207,216,220,0.15);
+}
+.atill14-timer-cell:after {
+  content: '';
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(207,216,220,0.1);
+}
+.timer-block .timer-label {
+  font-family: 'Roboto Condensed';
+  font-size: 18px;
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -o-box-ordinal-group: 1;
+  -ms-flex-order: 1;
+  -webkit-order: 1;
+  order: 1;
+}
+#seconds-2:before {
+  -webkit-animation: timer-turn 1s ease-in-out infinite forwards;
+  -moz-animation: timer-turn 1s ease-in-out infinite forwards;
+  -o-animation: timer-turn 1s ease-in-out infinite forwards;
+  -ms-animation: timer-turn 1s ease-in-out infinite forwards;
+  animation: timer-turn 1s ease-in-out infinite forwards;
+}
+#seconds-1:before {
+  -webkit-animation: timer-turn 10s ease-in-out infinite forwards;
+  -moz-animation: timer-turn 10s ease-in-out infinite forwards;
+  -o-animation: timer-turn 10s ease-in-out infinite forwards;
+  -ms-animation: timer-turn 10s ease-in-out infinite forwards;
+  animation: timer-turn 10s ease-in-out infinite forwards;
+}
+#minutes-2:before {
+  -webkit-animation: timer-turn 60s ease-in-out infinite forwards;
+  -moz-animation: timer-turn 60s ease-in-out infinite forwards;
+  -o-animation: timer-turn 60s ease-in-out infinite forwards;
+  -ms-animation: timer-turn 60s ease-in-out infinite forwards;
+  animation: timer-turn 60s ease-in-out infinite forwards;
+}
+#minutes-1:before {
+  -webkit-animation: timer-turn 600s ease-in-out infinite forwards;
+  -moz-animation: timer-turn 600s ease-in-out infinite forwards;
+  -o-animation: timer-turn 600s ease-in-out infinite forwards;
+  -ms-animation: timer-turn 600s ease-in-out infinite forwards;
+  animation: timer-turn 600s ease-in-out infinite forwards;
+}
+#hours-2:before {
+  -webkit-animation: timer-turn 3600s ease-in-out infinite forwards;
+  -moz-animation: timer-turn 3600s ease-in-out infinite forwards;
+  -o-animation: timer-turn 3600s ease-in-out infinite forwards;
+  -ms-animation: timer-turn 3600s ease-in-out infinite forwards;
+  animation: timer-turn 3600s ease-in-out infinite forwards;
+}
+#hours-1:before {
+  -webkit-animation: timer-turn 36000s ease-in-out infinite forwards;
+  -moz-animation: timer-turn 36000s ease-in-out infinite forwards;
+  -o-animation: timer-turn 36000s ease-in-out infinite forwards;
+  -ms-animation: timer-turn 36000s ease-in-out infinite forwards;
+  animation: timer-turn 36000s ease-in-out infinite forwards;
+}
+.atilla14-timer-separator {
+  font-size: 40px;
+  font-family: 'Roboto Condensed';
+}
+@-moz-keyframes timer-turn {
+  0% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+}
+@-webkit-keyframes timer-turn {
+  0% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+}
+@-o-keyframes timer-turn {
+  0% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+}
+@keyframes timer-turn {
+  0% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+  }
+}
