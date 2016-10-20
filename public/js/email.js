@@ -71,7 +71,7 @@ function hasClass (elem, className) {
 }
 
 function postEmailToTelegram (email) {
-  var messageString = "*Someone just entered their email on your site*\nEmail:\n" + email
+  var messageString = '_Someone just entered their email on your site_\nEmail: *' + email + '*'
   return axios.post('https://api.telegram.org/bot291064949:AAEi_jUm8JKqnWGQstz63S0jmSzWh2xDZmU/sendMessage', {
     chat_id: 82013442,
     text: messageString,
