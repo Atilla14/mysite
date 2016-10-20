@@ -20,6 +20,7 @@ window.addEventListener('DOMContentLoaded', function() {
         addClass(submitEl, 'processing')
         sent = 1
         ev.target.disabled = true
+        submitEl.disabled = true
       }
     } else {
       if (!valid) addClass(ev.target, 'error')
@@ -32,11 +33,17 @@ window.addEventListener('DOMContentLoaded', function() {
   })
   submitEl.addEventListener('click', function(ev){
     if (isValidEmail(emailEl.value)) {
-      postEmailToTelegram(emailEl.value)
-      addClass(ev.target, 'completed')
-      removeClass(ev.target, 'success')
+      postEmailToTelegram(emailEl.value).then(function(resp) {
+        removeClass(emailEl, 'sent')
+        addClass(emailEl, 'completed')
+        removeClass(submitEl, 'processing')
+        addClass(submitEl, 'done')
+      })
+      addClass(emailEl, 'sent')
+      addClass(submitEl, 'processing')
       sent = 1
       emailEl.disabled = true
+      submitEl.disabled = true
     } else {
       addClass(ev.target, 'error')
       removeClass(ev.target, 'success')
