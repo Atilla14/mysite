@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', function() {
-  var date = countdown( new Date(1479061800000) )
+  var date = countdown( new Date(1479493800000) )
   var dateString = date.toString()
   var hours1 = document.getElementById('hours-1')
   var hours2 = document.getElementById('hours-2')
@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', function() {
   var seconds2 = document.getElementById('seconds-2')
 
   setInterval(function() {
-    date = countdown( new Date(1479061800000) )
+    date = countdown( new Date(1479493800000) )
     dateString = date.toString()
     hours1.innerText = toLocaleString(date.hours, 2)[0]
     hours2.innerText = toLocaleString(date.hours, 2)[1]
